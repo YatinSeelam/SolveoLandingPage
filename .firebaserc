@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "solveoai",
+    "clear": "solveoai",
+    "y": "formglam",
+    "n": "solveoai"
+  },
+  "targets": {},
+  "etags": {}
+}

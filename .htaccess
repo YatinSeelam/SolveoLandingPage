@@ -1,0 +1,7 @@
+<Files "firebase-config.js">
+    Order allow,deny
+    Deny from all
+</Files>
+location /firebase-config.js {
+deny all;
+}
