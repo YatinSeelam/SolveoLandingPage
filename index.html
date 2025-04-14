@@ -94,6 +94,44 @@
             onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
     </header>
 
+    <!-- Marketing Intern Signup Modal -->
+    <div id="marketingModal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white text-black rounded-lg shadow-xl p-6 w-[90%] max-w-sm relative transform transition-transform duration-300 scale-95">
+            <!-- Close (X) Button -->
+            <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Logo & Heading -->
+            <div class="flex flex-col items-center mb-4">
+                <img src="SolveoAI.png" alt="Solveo Logo" class="w-12 h-auto mb-2">
+                <h2 class="text-2xl font-bold text-center">Marketing Intern Signup</h2>
+            </div>
+
+            <!-- Information Text -->
+            <p class="mb-6 text-center">
+                If you are signing up to be a marketing intern, please click the button below to fill out the
+                application form.
+            </p>
+
+            <!-- Centered Sign Up Button -->
+            <div class="flex justify-center">
+                <a href="https://forms.gle/yourGoogleFormLink" target="_blank"
+                    class="px-6 py-2 border border-black rounded hover:bg-gray-100 transition">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <section
         class="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
@@ -159,7 +197,7 @@
                             </div>
                             <span class="bi bi-play-circle-fill"></span>
                         </div>
-                        <span>Watch video</span>
+                        <span>Coming Soon</span>
                     </button>
 
                     <a class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
@@ -733,7 +771,6 @@
             <div class="tw-flex tw-gap-6">
                 <a href="terms.html" class="footer-link tw-text-base hover:tw-underline">Terms of service</a>
                 <a href="privacy.html" class="footer-link tw-text-base hover:tw-underline">Privacy Policy</a>
-                <a href="#" class="footer-link tw-text-base hover:tw-underline">DCMA - Content Takedown</a>
             </div>
 
             <!-- Copyright Section -->
@@ -836,8 +873,38 @@
         document.addEventListener('DOMContentLoaded', function () {
             initializeApp();
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var marketingModal = document.getElementById("marketingModal");
+            var closeBtn = document.getElementById("closeModal");
+            var modalContainer = marketingModal.querySelector("div");
+
+            // Animate in: remove 'hidden', fade in, and scale up
+            if (marketingModal) {
+                marketingModal.classList.remove("hidden");
+                // Using setTimeout to ensure the browser applies the "hidden" removal before starting the transition
+                setTimeout(function () {
+                    marketingModal.classList.remove("opacity-0");
+                    modalContainer.classList.remove("scale-95");
+                }, 20);
+            }
+
+            // Animate out when the X button is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener("click", function () {
+                    marketingModal.classList.add("opacity-0");
+                    modalContainer.classList.add("scale-95");
+                    // After the transition duration, hide the modal
+                    setTimeout(function () {
+                        marketingModal.classList.add("hidden");
+                    }, 300); // This should match the duration-300 class in Tailwind
+                });
+            }
+        });
     </script>
 </body>
+
+</html>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
     integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
