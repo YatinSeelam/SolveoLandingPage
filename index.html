@@ -121,8 +121,8 @@
 
             <!-- Centered Sign Up Button -->
             <div class="flex justify-center">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxeLVeWMd8z3wqUST-AR2ydW4s1wuBs7II1vxR1fE9p_RD7w/viewform" target="_blank"
-                    class="px-6 py-2 border border-black rounded hover:bg-gray-100 transition">
+                <a href="https://docs.google.com/forms/d/1WVkZ7U1IpE1NJd6_1b1a51FkZzhyDryoCxfYd-rkCik/edit"
+                    target="_blank" class="px-6 py-2 border border-black rounded hover:bg-gray-100 transition">
                     Sign Up
                 </a>
             </div>
@@ -136,7 +136,6 @@
     <section
         class="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
         id="hero-section">
-
         <!-- video container -->
         <div class="tw-fixed tw-bg-[#000000af] dark:tw-bg-[#80808085] tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-transition-opacity
                 tw-duration-300 tw-scale-0 tw-opacity-0 tw-p-2
@@ -187,26 +186,32 @@
 
                 <div class="reveal-up tw-mt-10 mb-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4">
 
-                    <button onclick="openVideo()" class="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
-                                        tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white">
+                    <div class="reveal-up tw-flex">
+                        <a href="https://chromewebstore.google.com/detail/solveoai/njhlnfhfckdgcfponlbhmocioodgeplg"
+                            target="_blank" rel="noopener"
+                            class="tw-shadow-md hover:tw-shadow-xl dark:tw-shadow-gray-800 tw-transition-all tw-duration-300 
+                                                tw-border-[1px] tw-p-3 tw-px-4 tw-border-black dark:tw-border-white tw-rounded-md">
+                            Chrome extension
+                        </a>
+                    </div>
 
-                        <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
-                            <div
-                                class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
-                                             tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full">
-                            </div>
-                            <span class="bi bi-play-circle-fill"></span>
-                        </div>
-                        <span>Coming Soon</span>
-                    </button>
-
-                    <a class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
-                        href="#pricing-section">
+                    <a href="#pricing-section" class="
+                        btn tw-group max-lg:!tw-w-[160px]
+                        tw-flex tw-gap-2 tw-shadow-lg
+                        !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2
+                  
+                        /* ensure this link can transform */
+                        tw-transform tw-transition tw-duration-[0.3s]
+                        hover:tw-scale-x-[1.03]
+                      ">
                         <span>Improve Grades</span>
                         <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
                     </a>
 
                 </div>
+
+
+
 
                 <head>
                     <meta charset="UTF-8" />
@@ -244,84 +249,119 @@
         </div>
         </div>
     </section>
+    <!-- ====== SECTION WITH SUBJECT‑ICON INFINITE CAROUSEL ====== -->
+    <!-- ====== INFINITE SUBJECT ICON CAROUSEL ====== -->
+    <style>
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 0;
+            box-sizing: border-box;
+        }
 
-    <section
-        class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8">
-        <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
-            Trusted by missions of students
+        .carousel-track {
+            display: flex;
+            transform: translateX(0);
+            will-change: transform;
+        }
+
+        .carousel-img {
+            flex: 0 0 auto;
+            margin: 0 16px;
+        }
+
+        .carousel-img img {
+            display: block;
+            width: 120px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter .3s;
+        }
+
+        .carousel-img img:hover {
+            filter: none;
+        }
+    </style>
+
+    <section class="tw-relative tw-flex tw-w-full tw-flex-col tw-items-center tw-p-8">
+        <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl tw-mb-6">
+            Covers All Subjects
         </h2>
 
-        <div class="reveal-up carousel-container">
-            <div class="carousel lg:w-place-content-center tw-mt-10 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2">
-                <!-- Increased the height and width to make the images bigger -->
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/blue.png" alt="Blue"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+        <div class="reveal-up carousel-container tw-mt-10">
+            <div class="carousel-track">
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/2792/2792340.png" alt="Calculus">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/brown.png" alt="Brown"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/710/710481.png" alt="Chemistry">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/Cornell.png" alt="Cornell"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/2933/2933801.png" alt="Physics">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/d.png" alt="D"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/1077/1077159.png" alt="Geometry (Design Tool)">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/Harvard.png" alt="Harvard"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/1170/1170170.png" alt="Writing">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/mit.png" alt="MIT"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/4872/4872718.png" alt="Algebra">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/nyu.png" alt="NYU"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/882/882976.png" alt="DNA">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/penn.png" alt="Penn"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/759/759823.png" alt="Coding">
                 </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/princeton.png" alt="Princeton"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
-                </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/ucla.png" alt="UCLA"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
-                </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/yale.png" alt="Yale"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
-                </div>
-                <div class="carousel-img tw-h-[60px] tw-w-[200px]">
-                    <img src="./assets/images/colleges/cornell.png" alt="Yale"
-                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                        srcset="" />
+                <div class="carousel-img">
+                    <img src="https://cdn-icons-png.flaticon.com/64/1233/1233846.png" alt="Chemistry">
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.carousel-container');
+            const track = document.querySelector('.carousel-track');
+            const items = Array.from(track.children);
+
+            const sample = items[0];
+            const style = getComputedStyle(sample);
+            const itemW = sample.offsetWidth
+                + parseFloat(style.marginLeft)
+                + parseFloat(style.marginRight);
+
+            const needed = Math.ceil(container.clientWidth / itemW) + 2;
+            for (let i = 0; i < needed; i++) {
+                track.appendChild(items[i % items.length].cloneNode(true));
+            }
+
+            let offset = 0;
+            const speed = 0.5;
+
+            function loop() {
+                offset -= speed;
+                if (offset <= -itemW) {
+                    track.appendChild(track.firstElementChild);
+                    offset += itemW;
+                }
+                track.style.transform = `translateX(${offset}px)`;
+                requestAnimationFrame(loop);
+            }
+            loop();
+        });
+    </script>
+
+
 
 
     <section
-        class="tw-relative tw-flex  tw-w-full tw-min-h-[100vh] max-lg:tw-min-h-[80vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden">
+        class="tw-relative tw-flex  tw-w-full tw-min-h-[50vh] max-lg:tw-min-h-[85vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden">
         <div class="tw-w-full  tw-place-content-center tw-items-center 
                         tw-flex tw-flex-col tw-max-w-[900px] tw-gap-4 tw-p-4">
             <div class="purple-bg-grad  reveal-up tw-absolute tw-right-[20%] tw-top-[20%] tw-h-[200px] tw-w-[200px]">
@@ -338,7 +378,8 @@
                 taking control of their education and start your journey to success today!
             </p>
             <div class="reveal-up tw-flex tw-mt-8">
-                <a href="#" target="_blank" rel="noopener"
+                <a href="https://chromewebstore.google.com/detail/solveoai/njhlnfhfckdgcfponlbhmocioodgeplg"
+                    target="_blank" rel="noopener"
                     class="tw-shadow-md hover:tw-shadow-xl dark:tw-shadow-gray-800 tw-transition-all tw-duration-300 
                                         tw-border-[1px] tw-p-3 tw-px-4 tw-border-black dark:tw-border-white tw-rounded-md">
                     Get Solveo Now
@@ -471,128 +512,599 @@
     </section>
 
 
-    <section
-        class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%]">
-        <h3 class="reveal-up tw-text-4xl tw-font-medium tw-text-center max-md:tw-text-2xl">
-            Join millions students of using Solveo AI
-        </h3>
-        <!-- Testimonials -->
-        <div class="tw-mt-20 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3">
-            <!-- Card 1 -->
-            <div
-                class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]">
-                <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full">
-                        <img src="./assets/images/people/man2.jpg" class="tw-h-full tw-w-full tw-object-cover"
-                            alt="Mante" />
-                    </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Mante</div>
-                        <div class="tw-text-gray-700 dark:tw-text-gray-300 text-xs">Computer Science, State U</div>
-                    </div>
-                </div>
-                <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                    Solveo AI has been a game-changer for my studies. It streamlines my assignments and helps me finish
-                    my Pearson homework in record time. My grades have improved dramatically.
-                </p>
-            </div>
+    <!DOCTYPE html>
+    <html lang="en">
 
-            <!-- Card 2 -->
-            <div
-                class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]">
-                <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full">
-                        <img src="./assets/images/people/women.jpg" class="tw-h-full tw-w-full tw-object-cover"
-                            alt="Trich B" />
-                    </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Trich B</div>
-                        <div class="tw-text-gray-700 dark:tw-text-gray-300 text-xs">Business, City University</div>
-                    </div>
-                </div>
-                <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                    I was initially skeptical, but Solveo AI’s real-time web search has made my research and projects so
-                    much easier. It’s an essential tool for acing exams.
-                </p>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solveo AI - Testimonials</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
 
-            <!-- Card 3 -->
-            <div
-                class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]">
-                <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full">
-                        <img src="./assets/images/people/man.jpg" class="tw-h-full tw-w-full tw-object-cover"
-                            alt="John B" />
-                    </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">John B</div>
-                        <div class="tw-text-gray-700 dark:tw-text-gray-300 text-xs">Engineering, Tech U</div>
-                    </div>
-                </div>
-                <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                    Thanks to Solveo AI, I complete my homework faster and with greater accuracy. Its intuitive tools
-                    have saved my grades more than once.
-                </p>
-            </div>
+            body {
+                background-color: #f5f7fa;
+                padding: 20px;
+            }
 
-            <!-- Card 4 -->
-            <div
-                class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]">
-                <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full">
-                        <img src="./assets/images/people/man2.jpg" class="tw-h-full tw-w-full tw-object-cover"
-                            alt="Ben Alfert B" />
-                    </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Ben Alfert B</div>
-                        <div class="tw-text-gray-700 dark:tw-text-gray-300 text-xs">Economics, Ivy U</div>
-                    </div>
-                </div>
-                <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                    Solveo AI isn’t just a study tool – it’s a lifesaver. It simplifies my workload so I can focus on
-                    extra-curriculars while maintaining top grades.
-                </p>
-            </div>
+            .testimonials-section {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                padding: 2%;
+            }
 
-            <!-- Card 5 -->
-            <div
-                class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]">
-                <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full">
-                        <img src="./assets/images/people/women.jpg" class="tw-h-full tw-w-full tw-object-cover"
-                            alt="Rachel" />
-                    </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Rachel</div>
-                        <div class="tw-text-gray-700 dark:tw-text-gray-300 text-xs">Literature, City College</div>
-                    </div>
-                </div>
-                <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                    Solveo AI has completely changed how I study. Its tools make complicated subjects easier to
-                    understand and help me nail my Pearson homework.
-                </p>
-            </div>
+            .section-heading {
+                font-size: 2.25rem;
+                font-weight: 500;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
 
-            <!-- Card 6 -->
-            <div
-                class="reveal-up tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-gap-4 tw-rounded-lg tw-border-[1px] tw-bg-[#f6f7fb] dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-4 max-lg:tw-w-[320px]">
-                <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full">
-                        <img src="./assets/images/people/man.jpg" class="tw-h-full tw-w-full tw-object-cover"
-                            alt="Jamie" />
-                    </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Jamie</div>
-                        <div class="tw-text-gray-700 dark:tw-text-gray-300 text-xs">Media Studies, Modern U</div>
+            .reviews-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-auto-rows: auto;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .review-card {
+                background-color: white;
+                border-radius: 12px;
+                padding: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                position: relative;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .review-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .user-info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .user-avatar {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: #f0f0f0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                font-weight: 600;
+                color: white;
+            }
+
+            .avatar-green {
+                background-color: #27ae60;
+            }
+
+            .avatar-orange {
+                background-color: #e67e22;
+            }
+
+            .avatar-red {
+                background-color: #e74c3c;
+            }
+
+            .avatar-purple {
+                background-color: #8e44ad;
+            }
+
+            .avatar-blue {
+                background-color: #3498db;
+            }
+
+            .user-pic {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+            }
+
+            .user-pic img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .user-details {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .user-name {
+                font-size: 14px;
+                color: #333;
+                font-weight: 500;
+            }
+
+            .review-date {
+                font-size: 14px;
+                color: #777;
+            }
+
+            .star-rating {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .star-orange {
+                color: #f39c12;
+                font-size: 18px;
+            }
+
+            .star-green {
+                color: #2ecc71;
+                font-size: 18px;
+            }
+
+            .rating-value {
+                margin-left: 6px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #555;
+            }
+
+            .review-title {
+                font-weight: 600;
+                font-size: 16px;
+                margin-bottom: 6px;
+            }
+
+            .review-text {
+                font-size: 14px;
+                line-height: 1.5;
+                color: #444;
+                margin-bottom: 8px;
+            }
+
+            .review-more {
+                color: #3498db;
+                font-size: 14px;
+                text-decoration: none;
+            }
+
+            .app-store-icon {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 24px;
+                height: 24px;
+            }
+
+            .video-review {
+                position: relative;
+                padding-bottom: 177.78%;
+                /* 9:16 aspect ratio */
+                height: 0;
+                overflow: hidden;
+                border-radius: 12px;
+                background-color: black;
+            }
+
+            .video-review iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            .video-caption {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 2;
+            }
+
+            .review-card-video {
+                padding: 0;
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* Layout classes */
+            .left-video {
+                grid-column: 1;
+                grid-row: 1 / span 3;
+            }
+
+            .left-bottom {
+                grid-column: 1;
+                grid-row: 4;
+            }
+
+            .middle-review-1 {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .middle-review-2 {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            .middle-review-3 {
+                grid-column: 2;
+                grid-row: 3;
+            }
+
+            .middle-review-4 {
+                grid-column: 2;
+                grid-row: 4;
+            }
+
+            .right-top {
+                grid-column: 3;
+                grid-row: 1;
+            }
+
+            .right-video {
+                grid-column: 3;
+                grid-row: 2 / span 3;
+            }
+
+            .verified-badge {
+                background-color: #3498db;
+                color: white;
+                font-size: 10px;
+                padding: 2px 6px;
+                border-radius: 12px;
+                margin-left: 6px;
+                font-weight: 600;
+            }
+
+            /* Navigation */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                background-color: white;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+
+            .navbar-menu {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .navbar-item {
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+            }
+
+            .login-button {
+                background-color: #111;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            @media (max-width: 992px) {
+                .reviews-container {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .left-video {
+                    grid-column: 1;
+                    grid-row: 1 / span 2;
+                }
+
+                .left-bottom {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+
+                .middle-review-1 {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+
+                .middle-review-2 {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                .middle-review-3 {
+                    grid-column: 2;
+                    grid-row: 3;
+                }
+
+                .middle-review-4 {
+                    grid-column: 1;
+                    grid-row: 4;
+                }
+
+                .right-top {
+                    grid-column: 2;
+                    grid-row: 4;
+                }
+
+                .right-video {
+                    grid-column: 1 / span 2;
+                    grid-row: 5;
+                }
+
+                .section-heading {
+                    font-size: 1.75rem;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .reviews-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .left-video,
+                .left-bottom,
+                .middle-review-1,
+                .middle-review-2,
+                .middle-review-3,
+                .middle-review-4,
+                .right-top,
+                .right-video {
+                    grid-column: 1;
+                    grid-row: auto;
+                }
+
+                .section-heading {
+                    font-size: 1.5rem;
+                }
+
+                .navbar {
+                    flex-direction: column;
+                    gap: 1rem;
+                    padding: 1rem;
+                }
+
+                .navbar-menu {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 1rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="testimonials-section">
+            <h3 class="section-heading">
+                Join millions of students using Solveo AI
+            </h3>
+
+            <!-- Video + Reviews Grid -->
+            <div class="reviews-container">
+
+                <!-- Left Video (no bottom‑gap) -->
+                <div class="review-card review-card-video left-video" style="padding-bottom:0;">
+                    <div class="video-review">
+                        <iframe
+                            src="https://www.youtube.com/embed/JYJsNr7i6QA?autoplay=1&loop=1&playlist=JYJsNr7i6QA&controls=0&modestbranding=1&rel=0&showinfo=0&mute=1"
+                            title="YouTube Short"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
-                <p class="tw-mt-4 tw-text-gray-800 dark:tw-text-gray-200">
-                    As a busy student, Solveo AI has been essential. I finish my assignments and Pearson homework faster
-                    than ever, giving me more time for creativity and relaxation.
-                </p>
+
+                <!-- Sarah -->
+                <div class="review-card left-bottom">
+                    <div class="user-info">
+                        <div class="user-avatar avatar-blue">S</div>
+                        <div class="user-details">
+                            <div class="user-name">Sarah Wilson <span class="verified-badge">Verified</span></div>
+                            <div class="review-date">Feb 3</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★★ <span class="rating-value">5.0</span></div>
+                    <div class="review-text">
+                        ngl I was freaking out over my orgo final… Solveo AI walked me through every mechanism 🧪👍
+                        Ended up
+                        with an A—no cap!
+                    </div>
+                </div>
+
+                <!-- Courtney -->
+                <div class="review-card middle-review-1">
+                    <div class="user-info">
+                        <div class="user-pic">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Courtney">
+                        </div>
+                        <div class="user-details">
+                            <div class="user-name">Courtney Byrney</div>
+                            <div class="review-date">Aug 7</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★★ <span class="rating-value">5.0</span></div>
+                    <div class="review-title">Perfect</div>
+                    <div class="review-text">
+                        Totally saved my butt in kinematics. Love how it breaks down problems in plain English—feel
+                        like a
+                        physics pro now. 🙌
+                    </div>
+                </div>
+
+                <!-- Morty -->
+                <div class="review-card middle-review-2">
+                    <div class="user-info">
+                        <div class="user-pic">
+                            <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Morty">
+                        </div>
+                        <div class="user-details">
+                            <div class="user-name">MortyC‑137</div>
+                            <div class="review-date">Oct 21</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★★ <span class="rating-value">5.0</span></div>
+                    <div class="review-title">Lifesaver</div>
+                    <div class="review-text">
+                        12 hr shifts + anatomy = 😵‍💫. Solveo AI’s bite‑size answers kept me sane and passing every
+                        exam.
+                        Legit lifesaver!
+                    </div>
+                </div>
+
+                <!-- Juan -->
+                <div class="review-card middle-review-3">
+                    <div class="user-info">
+                        <div class="user-avatar avatar-orange">J</div>
+                        <div class="user-details">
+                            <div class="user-name">Juan Luis</div>
+                            <div class="review-date">Apr 12</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★★ <span class="rating-value">5.0</span></div>
+                    <div class="review-text">
+                        I don’t usually leave reviews, but Solveo AI leveled up my essay game—my prof even commented
+                        😎💯
+                    </div>
+                </div>
+
+                <!-- Diego -->
+                <div class="review-card middle-review-4">
+                    <div class="user-info">
+                        <div class="user-avatar avatar-red">D</div>
+                        <div class="user-details">
+                            <div class="user-name">Diego Escoto</div>
+                            <div class="review-date">Jul 21</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★☆ <span class="rating-value">4.0</span></div>
+                    <div class="review-text">
+                        Statistics was a nightmare until Solveo AI’s real‑world examples clicked. 4 stars cuz I want
+                        more
+                        tutorials, but still 🔥🔥
+                    </div>
+                </div>
+
+                <!-- Carl -->
+                <div class="review-card right-top">
+                    <div class="user-info">
+                        <div class="user-pic">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Carl">
+                        </div>
+                        <div class="user-details">
+                            <div class="user-name">Carl Vincent</div>
+                            <div class="review-date">Aug 7</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★☆ <span class="rating-value">4.0</span></div>
+                    <div class="review-text">
+                        Our group project was total chaos fr, but Solveo AI sorted our research and we crushed that
+                        presentation 🤘
+                    </div>
+                </div>
+
+                <!-- Right Video (no bottom‑gap) -->
+                <div class="review-card review-card-video right-video" style="padding-bottom:0;">
+                    <div class="video-review">
+                        <iframe
+                            src="https://www.youtube.com/embed/N7ugGiralec?autoplay=1&loop=1&playlist=N7ugGiralec&controls=0&modestbranding=1&rel=0&showinfo=0&mute=1"
+                            title="YouTube Short"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Extra testimonials -->
+                <div class="review-card bottom-review-1">
+                    <div class="user-info">
+                        <div class="user-avatar avatar-purple">M</div>
+                        <div class="user-details">
+                            <div class="user-name">Mia Patel <span class="verified-badge">Verified</span></div>
+                            <div class="review-date">May 8</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★★ <span class="rating-value">5.0</span></div>
+                    <div class="review-text">
+                        Solveo AI broke down differential equations so well—I actually look forward to problem sets
+                        now! 🥳
+                    </div>
+                </div>
+
+                <div class="review-card bottom-review-2">
+                    <div class="user-info">
+                        <div class="user-avatar avatar-teal">A</div>
+                        <div class="user-details">
+                            <div class="user-name">Alex Nguyen</div>
+                            <div class="review-date">Jun 14</div>
+                        </div>
+                    </div>
+                    <div class="star-rating">★★★★☆ <span class="rating-value">4.0</span></div>
+                    <div class="review-text">
+                        Mad respect—Solveo AI’s quick history prompts helped me crush a last‑minute paper. Saved my
+                        grade!
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+    </body>
+
+    <script>
+        // Optional JavaScript for handling interactions
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewCards = document.querySelectorAll('.review-card:not(.review-card-video)');
+
+            reviewCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 8px 30px rgba(0,0,0,0.1)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.08)';
+                });
+            });
+        });
+    </script>
 
 
 
@@ -692,71 +1204,167 @@
         </div>
     </section>
 
-    <section
+    <!-- FAQ Section -->
+    <section id="faq"
         class="tw-relative tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]">
-
-
-        <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl" id="faq">
-            Faq
+        <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">
+            Frequently Asked Questions
         </h3>
         <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
             <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+                <h4
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg tw-cursor-pointer">
                     <span>What's Solveo playground?</span>
                     <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
-                                    tw-ml-auto tw-font-semibold"></i>
+                    tw-ml-auto tw-font-semibold"></i>
                 </h4>
                 <div class="content max-lg:tw-text-sm">
-                    Pixa's playground is an integrated webapp to seamlessly test different LLM models such as GPT4,
-                    Claude,
-                    Gemini, etc.
+                    Solveo's playground is an integrated webapp to seamlessly test different LLM models such as
+                    GPT4,
+                    Claude, and Gemini to help with homework, essays, and studying.
                 </div>
             </div>
             <hr>
             <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>What are LLM?</span>
+                <h4
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg tw-cursor-pointer">
+                    <span>How does Solveo help with my homework?</span>
                     <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
-                                    tw-ml-auto tw-font-semibold"></i>
+                    tw-ml-auto tw-font-semibold"></i>
                 </h4>
                 <div class="content max-lg:tw-text-sm">
-                    LLM stands for "Large Language Model." It's a type of artificial intelligence model trained on vast
-                    amounts of text data to understand and generate human-like text. These models, like GPT-4, can
-                    perform various tasks, such as answering questions, generating content, translating languages, and
-                    more, by leveraging patterns learned from the data they were trained on.
+                    Solveo uses advanced AI technology to help you with various types of assignments. Take a photo
+                    of
+                    your homework, upload a document, or ask questions directly, and our AI will provide detailed
+                    explanations and solutions to help you understand the material better.
                 </div>
             </div>
             <hr>
             <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>Where can I test different AI models?</span>
+                <h4
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg tw-cursor-pointer">
+                    <span>Can Solveo help with any subject?</span>
                     <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
-                                    tw-ml-auto tw-font-semibold"></i>
+                    tw-ml-auto tw-font-semibold"></i>
                 </h4>
                 <div class="content max-lg:tw-text-sm">
-                    You can use Pixa's AI Playground to test different models, including
-                    GPT4, Claude, Perplexity and more.
+                    Yes! Solveo can help with math, science, history, English, foreign languages, computer science,
+                    and
+                    many more subjects. Our AI is trained on diverse educational content to assist students across
+                    all
+                    academic levels.
                 </div>
             </div>
             <hr>
-
             <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>Is Pixa Free to use?</span>
+                <h4
+                    class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg tw-cursor-pointer">
+                    <span>Is Solveo free to use?</span>
                     <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
-                                    tw-ml-auto tw-font-semibold"></i>
+                    tw-ml-auto tw-font-semibold"></i>
                 </h4>
                 <div class="content max-lg:tw-text-sm">
-                    You can start using Pixa for free, and later upgrade your plan to access all its features.
+                    You can start using Solveo for free with limited features. For full access to all our AI tools
+                    and
+                    unlimited questions, check out our affordable subscription plans in the pricing section.
                 </div>
             </div>
             <hr>
-
         </div>
-        <div class="purple-bg-grad max-md:tw-hidden reveal-up tw-absolute tw-bottom-14 tw-right-[20%] 
-                                 tw-h-[150px] tw-w-[150px] tw-rounded-full"></div>
-
     </section>
+
+    <style>
+        /* FAQ Styles */
+        .faq .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 0 1rem;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq.active .content {
+            max-height: 500px;
+            /* Increased max height for smoother animation */
+            padding: 1rem;
+            margin-top: 0.5rem;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq.active .bi-plus {
+            transform: rotate(45deg);
+        }
+
+        .faq-accordion {
+            cursor: pointer;
+            padding: 0.75rem 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion:hover {
+            background-color: rgba(200, 200, 200, 0.1);
+            /* Neutral gray instead of pink */
+            border-radius: 0.375rem;
+        }
+    </style>
+
+    <script>
+        // FAQ Accordion functionality
+        function setupFAQ() {
+            const faqItems = document.querySelectorAll('.faq');
+
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-accordion');
+                const content = item.querySelector('.content');
+
+                // Calculate actual content height for better animation
+                function updateContentHeight() {
+                    if (item.classList.contains('active')) {
+                        const actualHeight = content.scrollHeight + 32; // 32px for padding
+                        content.style.maxHeight = actualHeight + 'px';
+                    } else {
+                        content.style.maxHeight = '0';
+                    }
+                }
+
+                if (header) {
+                    header.addEventListener('click', () => {
+                        // Toggle active class on the clicked item
+                        const wasActive = item.classList.contains('active');
+
+                        // First update all items to ensure clean animation
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                                otherItem.querySelector('.content').style.maxHeight = '0';
+                            }
+                        });
+
+                        // Then toggle the clicked item with a small delay to prevent animation conflicts
+                        setTimeout(() => {
+                            item.classList.toggle('active', !wasActive);
+                            updateContentHeight();
+                        }, 10);
+                    });
+                }
+
+                // Handle window resize to update content heights
+                window.addEventListener('resize', () => {
+                    if (item.classList.contains('active')) {
+                        updateContentHeight();
+                    }
+                });
+            });
+        }
+
+        // Initialize FAQ when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            setupFAQ();
+        });
+    </script>
 
     <footer
         class="tw-mt-auto tw-flex tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] tw-text-black dark:tw-text-white">
@@ -919,7 +1527,5 @@
 
 <script src="./scripts/components.js"></script>
 <script src="./index.js"></script>
-
-<!-- By Paul: https://github.com/PaulleDemon -->
 
 </html>
